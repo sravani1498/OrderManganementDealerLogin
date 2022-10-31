@@ -1,6 +1,8 @@
 package com.dealer.login.service;
 
 import com.amazonaws.services.lambda.runtime.Context;
+import com.dealer.login.exceptions.BadRequestException;
+import com.dealer.login.exceptions.DBException;
 import com.dealer.login.model.Dealer;
 import software.amazon.awssdk.enhanced.dynamodb.DynamoDbEnhancedClient;
 import software.amazon.awssdk.enhanced.dynamodb.DynamoDbTable;
@@ -41,11 +43,11 @@ public class DealerService {
                 dealer.setMessage("Login Success");
                 dealer.setDealerId(result.getDealerId());
             } else {
-                throw new RuntimeException("Invalid Credentials");
+                throw new BadRequestException("Invalid Credentials");
             }
         } catch(DynamoDbException e) {
             context.getLogger().log(e.getMessage());
-            throw new RuntimeException("DB operation failed");
+            throw new DBException("DB operation failed");
         }
         return dealer;
     }

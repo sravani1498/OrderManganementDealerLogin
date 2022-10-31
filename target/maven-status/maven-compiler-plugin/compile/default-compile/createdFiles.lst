@@ -1,6 +1,7 @@
 com\dealer\login\model\Response.class
-com\dealer\login\model\Dealer.class
+com\dealer\login\exceptions\BadRequestException.class
 com\dealer\login\service\DealerService.class
-com\dealer\login\error\Error.class
-com\dealer\login\DependencyFactory.class
+com\dealer\login\exceptions\DBException.class
 com\dealer\login\LoginLambda.class
+com\dealer\login\model\Dealer.class
+com\dealer\login\DependencyFactory.class

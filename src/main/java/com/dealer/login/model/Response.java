@@ -1,7 +1,5 @@
 package com.dealer.login.model;
 
-import com.dealer.login.error.Error;
-
 public class Response<T> {
     private int httpStatusCode;
     private T responseBody;
@@ -18,7 +16,7 @@ public class Response<T> {
         return "Response{" +
                 "httpStatusCode=" + httpStatusCode +
                 ", responseBody=" + responseBody +
-                ", error=" + error +
+                ", exceptions=" + error +
                 '}';
     }
 
