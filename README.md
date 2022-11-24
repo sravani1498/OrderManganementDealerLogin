@@ -1,12 +1,11 @@
-# App
+# Dealer Login
+
+This project contains aws lambda handler for login and validates the user credentials.
 
 This project contains an AWS Lambda maven application with [AWS Java SDK 2.x](https://github.com/aws/aws-sdk-java-v2) dependencies.
 
 ## Prerequisites
 - Java 1.8+
-- Apache Maven
-- [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
-- Docker
 
 ## Development
 
